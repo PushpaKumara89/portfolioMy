@@ -1,1309 +1,364 @@
-
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-
-    <!-- Site Title -->
-    <title>PushpaKumara</title>
-
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" href="assets/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css">
-    <link rel="stylesheet" href="assets/css/flaticon_gerold.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/backToTop.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/light-mode.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PushpaKumara | DevOps Engineer</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-    <!-- Preloader Area Start -->
-    <div class="preloader">
-        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-            <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
-        </svg>
+    <!-- Space Background Canvas for interactivity -->
+    <canvas id="particles-canvas"></canvas>
 
-        <div class="preloader-heading">
-            <div class="load-text">
-                <span>L</span>
-                <span>o</span>
-                <span>a</span>
-                <span>d</span>
-                <span>i</span>
-                <span>n</span>
-                <span>g</span>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-text">PK<span class="dot">.</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link">~ / home</a></li>
+                <li><a href="#about" class="nav-link">~ / about</a></li>
+                <li><a href="#skills" class="nav-link">~ / stack</a></li>
+                <li><a href="#experience" class="nav-link">~ / experience</a></li>
+                <li><a href="#projects" class="nav-link">~ / projects</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container glass-panel reveal fade-bottom"
+            style="padding: 0; overflow: hidden; max-width: 850px;">
+            <div class="terminal-header">
+                <div class="term-dots">
+                    <span class="term-dot close"></span>
+                    <span class="term-dot min"></span>
+                    <span class="term-dot max"></span>
+                </div>
+                <span class="term-title">bash - root@kubernetes-cluster:~</span>
+            </div>
+            <div class="hero-terminal-body">
+                <p class="term-cmd"><span class="prompt">root@k8s-cluster:~#</span> ./whoami.sh</p>
+                <div class="term-output">
+                    <span class="greeting">Hello, world! I am</span>
+                    <h1 class="name">PushpaKumara</h1>
+                </div>
+
+                <p class="term-cmd"><span class="prompt">root@k8s-cluster:~#</span> cat identity.yml | grep role</p>
+                <div class="term-output">
+                    <h2 class="title">
+                        <span class="typing-text">DevOps Engineer | Cloud Infrastructure Specialist</span><span
+                            class="cursor">_</span>
+                    </h2>
+                </div>
+
+                <p class="term-cmd"><span class="prompt">root@k8s-cluster:~#</span> echo $MISSION</p>
+                <div class="term-output mb-4">
+                    <p class="tagline">"Bridging the gap between robust code and scalable infrastructure."</p>
+                </div>
+
+                <div class="contact-actions" style="margin-top: 2rem;">
+                    <a href="Pushpakumara_CV.pdf" download class="btn btn-primary"><i class="fas fa-download"></i>
+                        Download CV</a>
+                    <a href="#projects" class="btn btn-outline"><i class="fas fa-play"></i> Deploy Pipeline</a>
+                    <a href="mailto:kpushpakumarajd@gmail.com" class="btn btn-outline"><i class="fas fa-terminal"></i>
+                        Ping Me</a>
+                </div>
+
+                <div class="social-links" style="margin-top: 2rem;">
+                    <a href="https://www.linkedin.com/in/pushpakumara-k/" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/PushpaKumara89" target="_blank" title="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="tel:0756920507" title="075-6920507"><i class="fas fa-phone-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-container reveal fade-left">
+            <h2 class="section-title">01. About Me<span class="dot">.</span></h2>
+            <div class="about-wrapper">
+                <div class="about-image-container reveal zoom-in">
+                    <img src="assets/img/profile.png" alt="Pushpakumara Kumara" class="profile-img">
+                </div>
+                <div class="about-content glass-card border-k8s">
+                    <i class="fas fa-quote-left quote-icon" style="margin-left: 15px;"></i>
+                    <p>I am a dedicated DevOps Engineer with a solid foundation in backend development. I transitioned
+                        from software engineering to focus entirely on building scalable, highly available
+                        infrastructure.</p>
+                    <p>My expertise lies in orchestrating containers using Docker and Kubernetes, building robust CI/CD
+                        pipelines, and automating deployment workflows.</p>
+                    <p class="highlight">I firmly believe in the <strong class="text-k8s">'Automate Everything'</strong>
+                        philosophy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="section-container reveal fade-right">
+            <h2 class="section-title">02. Tech Stack & Infra<span class="dot">.</span></h2>
+
+            <div class="skills-grid">
+                <!-- DevOps (Moved to Top/First) -->
+                <div class="skill-card glass-card hover-lift k8s-card-active">
+                    <div class="skill-header">
+                        <i class="fas fa-dharmachakra k8s-icon"></i>
+                        <h3>DevOps & Cloud</h3>
+                    </div>
+                    <ul class="skill-list term-list">
+                        <li><span>Docker, Docker Compose</span></li>
+                        <li><span>Kubernetes (Pods, Deployments...)</span></li>
+                        <li><span>GitHub Actions, Jenkins</span></li>
+                        <li><span>AWS (EC2, S3), SSL/TLS</span></li>
+                        <li><span>Terraform (Learning)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-card glass-card hover-lift">
+                    <div class="skill-header">
+                        <i class="fas fa-server accent-icon"></i>
+                        <h3>Backend & Arch</h3>
+                    </div>
+                    <ul class="skill-list term-list">
+                        <li><span>Java (Expert), Python, JS/TS</span></li>
+                        <li><span>Spring Boot, Spring MVC</span></li>
+                        <li><span>Node.js (Express), Flask</span></li>
+                        <li><span>Microservices, Layered Arch</span></li>
+                        <li><span>API Gateways & Load Balancing</span></li>
+                    </ul>
+                </div>
+
+                <!-- Frontend & UI -->
+                <div class="skill-card glass-card hover-lift">
+                    <div class="skill-header">
+                        <i class="fas fa-laptop-code accent-icon"></i>
+                        <h3>Frontend & Mobile</h3>
+                    </div>
+                    <ul class="skill-list term-list">
+                        <li><span>Angular 18 (Standalone)</span></li>
+                        <li><span>Vue.js, Bootstrap</span></li>
+                        <li><span>Android Native (Android Studio)</span></li>
+                    </ul>
+                </div>
             </div>
 
-        </div>
-    </div>
-    <!-- Preloader Area End -->
-
-    <!-- start: Back To Top -->
-    <div class="progress-wrap" id="scrollUp">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-
-
-    <!-- end: Back To Top -->
-
-    <!-- HEADER START -->
-    <header class="tj-header-area header-absolute">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 d-flex flex-wrap align-items-center">
-
-                    <div class="logo-box">
-                        <a href="#">
-<!--                            <img src="assets/img/logo/logo.png" alt="">-->
-                            <img src="assets/img/logo/logopk.png" alt="">
-                        </a>
+            <!-- Core Strengths Meter -->
+            <div class="core-strengths glass-card mt-4 border-k8s">
+                <h3 class="subsection-title mb-2"><i class="fas fa-tachometer-alt"></i> Core Engineering Strengths</h3>
+                <div class="skill-meters">
+                    <div class="meter-item">
+                        <div class="meter-label">
+                            <span class="text-mono">Docker & Kubernetes</span>
+                            <span class="text-k8s">95%</span>
+                        </div>
+                        <div class="meter-bg">
+                            <div class="meter-fill gradient-purple" data-width="95%"></div>
+                        </div>
                     </div>
+                    <div class="meter-item">
+                        <div class="meter-label">
+                            <span class="text-mono">CI/CD & Automation</span>
+                            <span class="text-k8s">90%</span>
+                        </div>
+                        <div class="meter-bg">
+                            <div class="meter-fill gradient-purple" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="meter-item">
+                        <div class="meter-label">
+                            <span class="text-mono">Java & Spring Boot</span>
+                            <span class="text-blue">88%</span>
+                        </div>
+                        <div class="meter-bg">
+                            <div class="meter-fill gradient-blue" data-width="88%"></div>
+                        </div>
+                    </div>
+                    <div class="meter-item">
+                        <div class="meter-label">
+                            <span class="text-mono">AWS & Cloud Infra</span>
+                            <span class="text-blue">80%</span>
+                        </div>
+                        <div class="meter-bg">
+                            <div class="meter-fill gradient-blue" data-width="80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="header-info-list d-none d-md-inline-block">
-                        <ul class="ul-reset">
-                            <li><a href="mailto:kpushpakumarajd@gmail.com">kpushpakumarajd@gmail.com</a></li>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="section-container reveal fade-up">
+            <h2 class="section-title">03. Deployment History<span class="dot">.</span></h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot gradient-purple"></div>
+                    <div class="timeline-content glass-card hover-lift border-k8s">
+                        <span class="date-badge">Aug 2024 - Present</span>
+                        <h3 class="role">Associate Software Engineer (DevOps Focus)</h3>
+                        <h4 class="company"><i class="fas fa-server"></i> TID Global</h4>
+                        <ul class="timeline-bullets term-list">
+                            <li>Leading DevOps implementation and modernizing deployment workflows.</li>
+                            <li>Containerizing legacy applications and optimizing cloud infrastructure.</li>
                         </ul>
                     </div>
-
-                    <div class="header-menu">
-                        <nav>
-                            <ul>
-                                <!-- <li><a href="#services-section">Services</a></li> -->
-                                <!-- <li><a href="#works-section">Works</a></li> -->
-                                <li><a href="#resume-section">Resume</a></li>
-                                <li><a href="#skills-section">Skills</a></li>
-                                <li><a href="#testimonials-section">Certificates</a></li>
-                                <li><a href="#contact-section">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <!--id="hire-me"-->
-                    <div class="header-button" onclick="hireMe()">
-                        <a href="#" class="btn tj-btn-primary">Hire me!</a>
-                    </div>
-
-                    <div class="menu-bar d-lg-none">
-                        <button>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </header>
-    <header class="tj-header-area header-2 header-sticky sticky-out">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 d-flex flex-wrap align-items-center">
 
-                    <div class="logo-box">
-                        <a href="#">
-<!--                            <img src="assets/img/logo/logo.png" alt="">-->
-                            <img src="assets/img/logo/logopk.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="header-info-list d-none d-md-inline-block">
-                        <ul class="ul-reset">
-                            <li><a href="mailto:kpushpakumarajd@gmail.com">kpushpakumarajd@gmail.com</a></li>
+                <div class="timeline-item">
+                    <div class="timeline-dot gradient-blue"></div>
+                    <div class="timeline-content glass-card hover-lift">
+                        <span class="date-badge">May 2022 - Aug 2024</span>
+                        <h3 class="role">Software Developer Intern</h3>
+                        <h4 class="company"><i class="fas fa-code"></i> WiXis 360 (Pvt) Ltd</h4>
+                        <ul class="timeline-bullets term-list">
+                            <li>Focused on full-stack development using Java and Angular.</li>
                         </ul>
                     </div>
+                </div>
 
-                    <div class="header-menu">
-                        <nav>
-                            <ul>
-                                <!-- <li><a href="#services-section">Services</a></li> -->
-                                <!-- <li><a href="#works-section">Works</a></li> -->
-                                <li><a href="#resume-section">Resume</a></li>
-                                <li><a href="#skills-section">Skills</a></li>
-                                <li><a href="#testimonials-section">Certificates</a></li>
-                                <li><a href="#contact-section">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <div class="header-button" onclick="hireMe()">
-                        <a href="#" class="btn tj-btn-primary" >Hire me!</a>
-                    </div>
-
-                    <div class="menu-bar d-lg-none">
-                        <button>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card hover-lift">
+                        <span class="date-badge">2012 - 2020</span>
+                        <h3 class="role">Finance Professional (Transitioned)</h3>
+                        <h4 class="company"><i class="fas fa-chart-line"></i> Lakpa Footwear & D.A. Abeyawardene</h4>
+                        <p class="desc">Account Executive (2014 - 2020) & Audit Apprentice (2012 - 2014). Transitioned
+                            from Finance to Software and Infrastructure.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <!-- HEADER END -->
+    </section>
 
-    <main class="site-content" id="content">
-        <!-- HERO SECTION START -->
-        <section class="hero-section d-flex align-items-center" id="intro">
-            <div class="intro_text">
-                <svg viewBox="0 0 1320 300">
-                    <text x="50%" Y="50%" text-anchor="middle">
-                        HI
-                    </text>
-                </svg>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="section-container reveal fade-bottom">
+            <h2 class="section-title">04. Key Infrastructures & Projects<span class="dot">.</span></h2>
 
-            </div>
-            <div class="container">
-                <div class="row align-items-center">
-
-                    <div class="col-md-6">
-                        <div class="hero-content-box">
-                            <span class="hero-sub-title">I am PushpaKumara</span>
-                            <h2 class="hero-title">Java Developer(ASE) +<br> Android Developer</h2>
-
-                            <div class="hero-image-box d-md-none text-center">
-                                <img src="assets/img/me1.png" alt="">
-                            </div>
-
-                            <p class="lead">I design and build scalable backend systems, breaking down 
-                                complex challenges to create high-performance, resilient solutions that 
-                                power seamless digital experiences.</p>
-                            <div class="button-box d-flex flex-wrap align-items-center">
-                                <a href="assets/Resume.pdf" class="btn tj-btn-secondary" target="_blank">Download
-                                    CV <i class="flaticon-download"></i></a>
-                                <!--Code direct download -->
-                                <!--<a href="assets/pushpakumara.pdf" class="btn tj-btn-secondary"
-                                   download="cv">Download
-                                    CV <i class="flaticon-download"></i></a>-->
-                                <ul class="ul-reset social-icons">
-<!--                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>-->
-<!--                                    <li><a href="#"><i class="fa-light fa-basketball"></i></a></li>-->
-                                    <li><a href="https://www.linkedin.com/in/pushpakumara-k/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="https://github.com/PushpaKumara89" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 d-none d-md-block">
-                        <div class="hero-image-box text-center hero-image-box-web">
-                            <img src="assets/img/me1.png" alt="">
-                        </div>
-                    </div>
+            <div class="projects-grid">
+                <!-- DevOps Projects (Moved to front with distinct styling) -->
+                <div class="project-card glass-card k8s-card-active">
+                    <div class="project-badge k8s-badge"><i class="fab fa-docker"></i> Containerization</div>
+                    <h3 class="project-title">WordPress Containerization</h3>
+                    <p class="project-desc">"Implemented a robust, production-ready WordPress environment using Docker
+                        Compose,
+                        ensuring seamless integration between the application layer and the MySQL database."</p>
                 </div>
 
-                <div class="funfact-area">
-                    <div class="row">
-                        <div class="col-6 col-lg-4">
-                            <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                                <div  class="number"><span id="experience" class="odometer" data-count="0">0</span></div>
-                                <div class="text">Years of <br>Working Experience</div>
-                            </div>
-                        </div>
-                        <!-- <div class="col-6 col-lg-4">
-                            <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                                <div class="number"><span class="odometer" data-count="50">0</span>+</div>
-                                <div class="text">Project <br>Completed</div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="col-6 col-lg-4">
-                            <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                                <div class="number"><span class="odometer" data-count="1.5">0</span>K</div>
-                                <div class="text">Happy <br>Clients</div>
-                            </div>
-                        </div> -->
-                        <!--<div class="col-6 col-lg-3">
-                            <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                                <div class="number"><span class="odometer" data-count="14">0</span></div>
-                                <div class="text">Years of <br>Experience</div>
-                            </div>
-                        </div>-->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- HERO SECTION END -->
-
-        <!-- SERVICES SECTION START -->
-        <!-- <section class="services-section" id="services-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-header text-center">
-                            <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Quality Services</h2>
-                            <p class=" wow fadeInUp" data-wow-delay=".4s">We put your ideas and thus your wishes in the
-                                form
-                                of a unique web project that inspires you
-                                and you customers.</p>
-                        </div>
-                    </div>
+                <div class="project-card glass-card k8s-card-active">
+                    <div class="project-badge k8s-badge"><i class="fas fa-shield-alt"></i> K8s & Security</div>
+                    <h3 class="project-title">K8s Ingress & Security</h3>
+                    <p class="project-desc">Implemented SSL/TLS termination and custom routing using Kubernetes Ingress.
+                    </p>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="services-widget position-relative">
-                            <div class="service-item current d-flex flex-wrap align-items-center wow fadeInUp"
-                                data-wow-delay=".5s">
-                                <div class="left-box d-flex flex-wrap align-items-center">
-                                    <span class="number">01</span>
-                                    <h3 class="service-title">Branding Design</h3>
-                                </div>
-                                <div class="right-box">
-                                    <p>I break down complex user experinece problems to create integritiy focussed
-                                        solutions
-                                        that connect billions of people</p>
-                                </div>
-                                <i class="flaticon-up-right-arrow"></i>
-                                <button data-mfp-src="#service-wrapper" class="service-link modal-popup"></button>
-                            </div>
-                            <div class="service-item d-flex flex-wrap align-items-center wow fadeInUp"
-                                data-wow-delay=".6s">
-                                <div class="left-box d-flex flex-wrap align-items-center">
-                                    <span class="number">02</span>
-                                    <h3 class="service-title">Web Design</h3>
-                                </div>
-                                <div class="right-box">
-                                    <p>I break down complex user experinece problems to create integritiy focussed
-                                        solutions
-                                        that connect billions of people</p>
-                                </div>
-                                <i class="flaticon-up-right-arrow"></i>
-                                <button data-mfp-src="#service-wrapper" class="service-link modal-popup"></button>
-                            </div>
-                            <div class="service-item d-flex flex-wrap align-items-center wow fadeInUp"
-                                data-wow-delay=".7s">
-                                <div class="left-box d-flex flex-wrap align-items-center">
-                                    <span class="number">03</span>
-                                    <h3 class="service-title">UI/UX Design</h3>
-                                </div>
-                                <div class="right-box">
-                                    <p>I break down complex user experinece problems to create integritiy focussed
-                                        solutions
-                                        that connect billions of people</p>
-                                </div>
-                                <i class="flaticon-up-right-arrow"></i>
-                                <button data-mfp-src="#service-wrapper" class="service-link modal-popup"></button>
-                            </div>
-                            <div class="service-item d-flex flex-wrap align-items-center wow fadeInUp"
-                                data-wow-delay=".8s">
-                                <div class="left-box d-flex flex-wrap align-items-center">
-                                    <span class="number">04</span>
-                                    <h3 class="service-title">Graphics Design</h3>
-                                </div>
-                                <div class="right-box">
-                                    <p>I break down complex user experinece problems to create integritiy focussed
-                                        solutions
-                                        that connect billions of people</p>
-                                </div>
-                                <i class="flaticon-up-right-arrow"></i>
-                                <button data-mfp-src="#service-wrapper" class="service-link modal-popup"></button>
-                            </div>
-                            <div class="active-bg wow fadeInUp" data-wow-delay=".5s"></div>
-                        </div>
-                    </div>
+                <div class="project-card glass-card k8s-card-active">
+                    <div class="project-badge k8s-badge"><i class="fas fa-infinity"></i> Automation</div>
+                    <h3 class="project-title">CI/CD Pipeline</h3>
+                    <p class="project-desc">Built an automated build-test-deploy pipeline using Jenkins and GitHub
+                        Actions.</p>
                 </div>
-            </div>
-        </section> -->
-        <!-- SERVICES SECTION END -->
 
-        <!-- start: Service Popup -->
-        <div id="service-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
-            <div class="popup_modal_img">
-                <img src="./assets/img/modal-img.jpg" alt="">
-            </div>
+                <!-- Dev Projects -->
+                <div class="project-card glass-card">
+                    <div class="project-badge dev-badge"><i class="fas fa-layer-group"></i> Full-Stack</div>
+                    <h3 class="project-title">Coop Members Registry</h3>
+                    <p class="project-desc">
+                        A secure, full-stack management system built with an <b>Angular 18</b> frontend and a
+                        <b>Spring Boot</b> backend. Integrated with <b>Spring Security</b> to ensure robust
+                        authentication and role-based access control (RBAC).
+                    </p>
+                </div>
 
-            <div class="popup_modal_content">
-                <div class="service_details">
-                    <div class="row">
-                        <div class="col-lg-7 col-xl-8">
-                            <div class="service_details_content">
-                                <div class="service_info">
-                                    <h6 class="subtitle">SERVICES</h6>
-                                    <h2 class="title">UI/UX Design</h2>
-                                    <div class="desc">
-                                        <p>Elizabeth some dodgy chavs are you taking the piss faff about pardon amongst
-                                            car
-                                            boot a load of old tosh is cracking goal blow off telling brown.</p>
+                <div class="project-card glass-card">
+                    <div class="project-badge dev-badge"><i class="fas fa-layer-group"></i> Full-Stack</div>
+                    <h3 class="project-title">Hotel Reservation System</h3>
+                    <p class="project-desc">Full-stack Spring Boot/Angular project with admin/guest panels.</p>
+                </div>
 
-                                        <p>Brolly show off show off pick your nose and blow off well A bit of how’s your
-                                            father tomfoolery blimey, me old mucker starkers Queen’s English dropped a
-                                            clanger bite your arm spiffing good time burke Why chancer. Hotpot bum bag
-                                            cracking goal young delinquent naff bugger cup of chars bender loo it’s all
-                                            gone
-                                            to pot the nancy cheeky.</p>
+                <div class="project-card glass-card">
+                    <div class="project-badge dev-badge"><i class="fas fa-tools"></i> Tooling</div>
+                    <h3 class="project-title">FB Scrapping Tool</h3>
+                    <p class="project-desc">Java/Angular based tool for data extraction from social media.</p>
+                </div>
 
-                                        <p>At public school cras bog some dodgy chav Richard Why argy bargy vagabon
-                                            William
-                                            bender matie boy, off his nut chancer Jeffrey up the kyver say mufty you mug
-                                            ummm telling pear shaped Oxford owt to do with me do one so said are you
-                                            taking
-                                            his.</p>
-                                    </div>
-
-                                    <h3 class="title">Services Process</h3>
-                                    <div class="desc">
-                                        <p>Elizabeth some dodgy chavs are you taking the piss faff about pardon amongst
-                                            car
-                                            boot a load of old tosh is cracking goal blow off telling brown.</p>
-                                    </div>
-                                    <ul>
-                                        <li>Reinvent Your Business to Better</li>
-                                        <li>Pioneering the Internet's First</li>
-                                        <li>Pioneering the Design World's First</li>
-                                        <li>Pioneering the Design World's First</li>
-                                        <li>Pioneering the Design World's First</li>
-                                        <li>Pioneering the Design World's First</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-xl-4">
-                            <div class="tj_main_sidebar">
-                                <div class="sidebar_widget services_list">
-                                    <div class="widget_title">
-                                        <h3 class="title">All Services</h3>
-                                    </div>
-                                    <ul>
-                                        <li class="active">
-                                            <button>
-                                                <i class="flaticon-design"></i>
-                                                Branding Design
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button>
-                                                <i class="flaticon-3d-movie"></i>
-                                                3D Animation
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button>
-                                                <i class="flaticon-ux-design"></i>
-                                                UI/UX Design
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button>
-                                                <i class="flaticon-web-design"></i>
-                                                Web Design
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button>
-                                                <i class="flaticon-ui-design"></i>
-                                                App Design
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="sidebar_widget contact_form">
-                                    <div class="widget_title">
-                                        <h3 class="title">Get in Touch</h3>
-                                    </div>
-
-                                    <form action="/portfolio">
-                                        <div class="form_group">
-                                            <input type="text" name="name" id="name" placeholder="Name"
-                                                autocomplete="off">
-                                        </div>
-                                        <div class="form_group">
-                                            <input type="email" name="semail" id="semail" placeholder="Email"
-                                                autocomplete="off">
-                                        </div>
-                                        <div class="form_group">
-                                            <textarea name="smessage" id="smessage" placeholder="Your message"
-                                                autocomplete="off"></textarea>
-                                        </div>
-                                        <div class="form_btn">
-                                            <button class="btn tj-btn-primary" type="submit">Send Message</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Tooling & ML Projects -->
+                <div class="project-card glass-card">
+                    <div class="project-badge ml-badge"><i class="fas fa-chart-bar"></i> Analytics & ML</div>
+                    <h3 class="project-title">Stock Price Predictor</h3>
+                    <p class="project-desc">Built a machine learning model to predict UBER future stock trends using
+                        historical CSV data.</p>
                 </div>
             </div>
         </div>
-        <!-- end: Service Popup -->
+    </section>
 
-        <!-- PORTFOLIO SECTION START -->
-        <!-- <section class="portfolio-section" id="works-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-header text-center">
-                            <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Recent Works</h2>
-                            <p class=" wow fadeInUp" data-wow-delay=".4s">We put your ideas and thus your wishes in the
-                                form of a unique web project that inspires
-                                you
-                                and you customers.</p>
-                        </div>
-                    </div>
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="section-container reveal zoom-in">
+            <h2 class="section-title">05. Education & Certifications<span class="dot">.</span></h2>
+            <div class="education-grid">
+                <div class="edu-item glass-card tech-border">
+                    <i class="fas fa-laptop-code edu-icon text-blue"></i>
+                    <h4>Master Java Developer</h4>
+                    <p>IJSE</p>
                 </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
-                            <div class="button-group filter-button-group">
-                                <button data-filter="*" class="active">All</button>
-                                <button data-filter=".uxui">UX/UI</button>
-                                <button data-filter=".branding">Branding</button>
-                                <button data-filter=".mobile-app">Apps</button>
-                                <div class="active-bg"></div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
-                            <div class="portfolio-sizer"></div>
-                            <div class="gutter-sizer"></div>
-                            <div class="portfolio-item branding">
-                                <div class="image-box">
-                                    <img src="assets/img/portfolio/2.jpg" alt="">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Deloitte</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item uxui">
-                                <div class="image-box">
-                                    <img src="assets/img/portfolio/1.jpg" alt="">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/img/portfolio/3.jpg" alt="">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item branding">
-                                <div class="image-box">
-                                    <img src="assets/img/portfolio/4.jpg" alt="">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Mochnix</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="edu-item glass-card tech-border">
+                    <i class="fas fa-certificate edu-icon text-k8s"></i>
+                    <h4>Executive Level</h4>
+                    <p>CA Sri Lanka</p>
                 </div>
-            </div>
-        </section> -->
-        <!-- PORTFOLIO SECTION END -->
-
-        <!-- start: Portfolio Popup -->
-        <div id="portfolio-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
-            <div >
-                <img src="./assets/img/certificates/jcse.jpg" alt="">
-            </div>
-
-           <!-- <div class="popup_modal_content">
-                <div class="portfolio_info">
-                    <div class="portfolio_info_text">
-                        <h2 class="title">DStudio</h2>
-                        <div class="desc">
-                            <p>They are was greater open above shelter lets itself under appear sixth open gathering
-                                made
-                                upon can't own above midst gathering gathered he one us saying can't divide.</p>
-                        </div>
-                        <a href="#" class="btn tj-btn-primary">live preview <i class="fal fa-arrow-right"></i></a>
-                    </div>
-                    <div class="portfolio_info_items">
-                        <div class="info_item">
-                            <div class="key">Category</div>
-                            <div class="value">Web Design</div>
-                        </div>
-                        <div class="info_item">
-                            <div class="key">Client</div>
-                            <div class="value">Artboard Studio</div>
-                        </div>
-                        <div class="info_item">
-                            <div class="key">Start Date</div>
-                            <div class="value">August 20, 2023</div>
-                        </div>
-                        <div class="info_item">
-                            <div class="key">Designer</div>
-                            <div class="value"><a href="#">ThemeJunction</a></div>
-                        </div>
-                    </div>
+                <div class="edu-item glass-card tech-border">
+                    <i class="fas fa-graduation-cap edu-icon text-k8s"></i>
+                    <h4>G.C.E. A/L</h4>
+                    <p>Kalutara Vidyalaya (3Cs)</p>
                 </div>
-
-                <div class="portfolio_gallery owl-carousel">
-                    <div class="gallery_item">
-                        <img src="./assets/img/portfolio/p-gallery-1.jpg" alt="">
-                    </div>
-                    <div class="gallery_item">
-                        <img src="./assets/img/portfolio/p-gallery-2.jpg" alt="">
-                    </div>
-                    <div class="gallery_item">
-                        <img src="./assets/img/portfolio/p-gallery-3.jpg" alt="">
-                    </div>
-                    <div class="gallery_item">
-                        <img src="./assets/img/portfolio/p-gallery-4.jpg" alt="">
-                    </div>
-                </div>
-
-                <div class="portfolio_description">
-                    <h2 class="title">Project Description</h2>
-                    <div class="desc">
-                        <p>The goal is there are many variations of passages of Lorem Ipsum available, but the majority
-                            have
-                            suffered alteration in some form, by injected humour, or randomised words which don't look
-                            even
-                            slightly believable.</p>
-
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered
-                            alteration in some form, by injected humour, or randomised words which don't look even
-                            slightly
-                            believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                            isn't
-                            anything embarrassing hidden in the middle of text.</p>
-                    </div>
-                </div>
-
-                <div class="portfolio_story_approach">
-                    <div class="portfolio_story">
-                        <div class="story_title">
-                            <h4 class="title">The story</h4>
-                        </div>
-                        <div class="story_content">
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look
-                                even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to
-                                be
-                                sure there isn't anything embarrassing hidden in the middle of text. There are many
-                                variations of passages of Lorem Ipsum available, but the majority have suffered
-                                alteration
-                                in some form, by injected humour, or randomised words which don't look even slightly
-                                believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                                isn't anything embarrassing hidden in the middle of text.</p>
-                        </div>
-                    </div>
-                    <div class="portfolio_approach">
-                        <div class="approach_title">
-                            <h4 class="title">OUR APPROACH</h4>
-                        </div>
-                        <div class="approach_content">
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look
-                                even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to
-                                be
-                                sure there isn't anything embarrassing hidden in the middle of text. There are many
-                                variations of passages of Lorem Ipsum available, but the majority have suffered
-                                alteration
-                                in some form, by injected humour, or randomised words which don't look even slightly
-                                believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                                isn't anything embarrassing hidden in the middle of text.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio_navigation">
-                    <div class="navigation_item prev-project">
-                        <a href="#" class="project">
-                            <i class="fal fa-arrow-left"></i>
-                            <div class="nav_project">
-                                <div class="label">Previous Project</div>
-                                <h3 class="title">Sebastian</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="navigation_item next-project">
-                        <a href="#" class="project">
-                            <div class="nav_project">
-                                <div class="label">Next Project</div>
-                                <h3 class="title">Qwillo</h3>
-                            </div>
-                            <i class="fal fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>-->
-        </div>
-        <!-- end: Portfolio Popup -->
-
-        <!-- RESUME SECTION START -->
-        <section class="resume-section" id="resume-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="section-header wow fadeInUp" data-wow-delay=".3s">
-                            <h2 class="section-title"><i class="flaticon-recommendation"></i> My Experience</h2>
-                        </div>
-                        <div class="resume-widget">
-                            <div class="resume-item wow fadeInLeft" data-wow-delay=".6s">
-                                <div class="time">
-                                    Sep 2024 - Present
-                                </div>
-                                <h3 class="resume-title">Java Developer(ASE)</h3>
-                                <div class="institute">
-                                    TID Global, 49 Greek Street, London, W1D 4EG, United Kingdom · Remote
-                                </div>
-                            </div>
-
-                            <div class="resume-item wow fadeInLeft" data-wow-delay=".6s">
-                                <div class="time">
-                                    May 2023 - Aug 2024
-                                </div>
-                                <h3 class="resume-title">Java Developer(ASE)</h3>
-                                <div class="institute">
-                                    WiXis 360,Panadura, Western
-                                </div>
-                            </div>
-                            <div class="resume-item wow fadeInLeft" data-wow-delay=".7s">
-                                <div class="time">
-                                    May 2022 - Apr 2023
-                                </div>
-                                <h3 class="resume-title">
-                                    Java Developer (Intern)
-                                </h3>
-                                <div class="institute">
-                                    WiXis 360,Panadura, Western
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="section-header wow fadeInUp" data-wow-delay=".4s">
-                            <h2 class="section-title"><i class="flaticon-graduation-cap"></i> My Education</h2>
-                        </div>
-
-                        <div class="resume-widget">
-                            <div class="resume-item wow fadeInRight" data-wow-delay=".5s">
-                                <div class="time">
-                                    Jan 2021 - Sep 2021
-                                </div>
-                                <h3 class="resume-title">
-                                    Diploma CMJD
-                                </h3>
-                                <div class="institute">
-                                    IJSE-Institute of Java Software Engineer
-                                </div>
-                            </div>
-                            <!--<div class="resume-item wow fadeInRight" data-wow-delay=".6s">
-                                <div class="time">
-                                    2016 - 2020
-                                </div>
-                                <h3 class="resume-title">Graphic design course</h3>
-                                <div class="institute">
-                                    University of Denmark
-                                </div>
-                            </div>
-                            <div class="resume-item wow fadeInRight" data-wow-delay=".7s">
-                                <div class="time">
-                                    2012 - 2015
-                                </div>
-                                <h3 class="resume-title">Web design course</h3>
-                                <div class="institute">
-                                    University of California
-                                </div>
-                            </div>
-                            <div class="resume-item wow fadeInRight" data-wow-delay=".8s">
-                                <div class="time">
-                                    2010 - 2011
-                                </div>
-                                <h3 class="resume-title">Design & Technology</h3>
-                                <div class="institute">
-                                    Parsons, The New School
-                                </div>
-                            </div>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- RESUME SECTION END -->
-
-        <!-- SKILLS SECTION START -->
-        <section class="skills-section" id="skills-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-header text-center">
-                            <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Skills</h2>
-                            <p class=" wow fadeInUp" data-wow-delay=".4s">Experienced in Spring Boot, API Gateways, Microservices, and Load Balancing. Skilled in building scalable systems, optimizing performance, managing APIs, and ensuring high availability using modern backend technologies. 🚀</p>
-                        </div>
-                    </div>
-                </div>
-                <div><h4 class=" wow fadeInUp" data-wow-delay=".4s">Programming Languages</h4></div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="skills-widget d-flex flex-wrap justify-content-center align-items-center">
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".3s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/java.svg" alt="">
-                                    </div>
-                                    <div class="number">72%</div>
-                                </div>
-                                <p>Java</p>
-                            </div>
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/python.svg" alt="">
-                                    </div>
-                                    <div class="number">64%</div>
-                                </div>
-                                <p>Python</p>
-                            </div>
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/html.svg" alt="">
-                                    </div>
-                                    <div class="number">57%</div>
-                                </div>
-                                <p>HTML</p>
-                            </div>
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".8s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/js.svg" alt="">
-                                    </div>
-                                    <div class="number">61%</div>
-                                </div>
-                                <p>JavaScript</p>
-                            </div>
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/css.svg" alt="">
-                                    </div>
-                                    <div class="number">52%</div>
-                                </div>
-                                <p>CSS</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div><h4 class=" wow fadeInUp" data-wow-delay=".4s">Frameworks </h4></div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="skills-widget d-flex flex-wrap justify-content-center align-items-center">
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/spring-boot.png" alt="">
-                                    </div>
-                                    <div class="number">85%</div>
-                                </div>
-                                <p>Spring Boot</p>
-                            </div>
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/android.svg" alt="">
-                                    </div>
-                                    <div class="number">89%</div>
-                                </div>
-                                <p>Android</p>
-                            </div>
-                            
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/flutter.svg" alt="">
-                                    </div>
-                                    <div class="number">84%</div>
-                                </div>
-                                <p>Flutter</p>
-                            </div>
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".6s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/vuejs.svg" alt="">
-                                    </div>
-                                    <div class="number">86%</div>
-                                </div>
-                                <p>Vue</p>
-                            </div>
-                            
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/react.svg" alt="">
-                                    </div>
-                                    <div class="number">89%</div>
-                                </div>
-                                <p>React</p>
-                            </div>
-                            
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/flask.svg" alt="">
-                                    </div>
-                                    <div class="number">89%</div>
-                                </div>
-                                <p>Flask</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                </div>
-                <div><h4 class=" wow fadeInUp" data-wow-delay=".4s">Tools & Platforms </h4></div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="skills-widget d-flex flex-wrap justify-content-center align-items-center">
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/docker_icon.svg" alt="">
-                                    </div>
-                                    <div class="number">66%</div>
-                                </div>
-                                <p>Docker</p>
-                            </div>
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/git_icon.svg" alt="">
-                                    </div>
-                                    <div class="number">63%</div>
-                                </div>
-                                <p>Git</p>
-                            </div>
-                            <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
-                                <div class="skill-inner">
-                                    <div class="icon-box">
-                                        <img src="assets/img/icons/github.svg" alt="">
-                                    </div>
-                                    <div class="number">58%</div>
-                                </div>
-                                <p>GitHub</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- SKILLS SECTION END -->
-
-        <!-- TESTIMONIAL SECTION START -->
-        <section class="testimonial-section" id="testimonials-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="section-header">
-                            <h2 class="section-title wow fadeInLeft" data-wow-delay=".3s">My Certificates</h2>
-                            <p class=" wow fadeInLeft" data-wow-delay=".4s">Certified Java developer passionate about backend systems, 
-                                microservices, and scalable software solutions.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7 col-xl-6 offset-xl-1">
-                        <div class="testimonials-widget wow fadeInRight" data-wow-delay=".5s">
-                            <div class="owl-carousel testimonial-carousel">
-                                <div class="testimonial-item portfolio-link modal-popup " data-mfp-src="#portfolio-wrapper"
-                                     style="cursor: pointer"
-                                >
-                                    <img src="assets/img/certificates/jcse.jpg" style="width: 100%">
-
-                                    <span class="designation mt-2">certificate for completed</span>
-                                    <h4 class="name">diploma of CMJD</h4>
-                                </div>
-
-                                <div class="testimonial-item" >
-                                    <img src="assets/img/certificates/jcse.jpg" style="width: 100%">
-
-                                    <span class="designation mt-2">certificate for completed</span>
-                                    <h4 class="name">diploma of CMJD</h4>
-
-                                </div>
-
-                                <div class="testimonial-item" >
-                                    <img src="assets/img/certificates/jcse.jpg" style="width: 100%">
-
-                                    <span class="designation mt-2">certificate for completed</span>
-                                    <h4 class="name">diploma of CMJD</h4>
-
-                                </div>
-
-
-                               <!-- <div class="testimonial-item">
-                                    <div class="top-area d-flex flex-wrap justify-content-between">
-                                        <div class="logo-box">
-                                            <img src="assets/img/testimonials/l_2.png" alt="">
-                                        </div>
-                                        <div class="image-box">
-                                            <img src="assets/img/testimonials/u_2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="icon-box">
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
-                                                fill="url(#paint0_linear_263_514)" />
-                                            <defs>
-                                                <linearGradient id="paint0_linear_263_514" x1="-0.0363755"
-                                                    y1="-0.0729998" x2="35.3333" y2="-0.0729991"
-                                                    gradientUnits="userSpaceOnUse">
-                                                    <stop offset="1" stop-color="var(&#45;&#45;tj-theme-primary)" />
-                                                    <stop offset="1" stop-color="#140C1C" stop-opacity="0" />
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
-                                                fill="url(#paint0_linear_263_515)" />
-                                            <defs>
-                                                <linearGradient id="paint0_linear_263_515" x1="-0.0363755"
-                                                    y1="-0.0729998" x2="35.3333" y2="-0.0729991"
-                                                    gradientUnits="userSpaceOnUse">
-                                                    <stop offset="1" stop-color="var(&#45;&#45;tj-theme-primary)" />
-                                                    <stop offset="1" stop-color="#140C1C" stop-opacity="0" />
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                    </div>
-                                    <p class="quote">“Taylor is a professional Designer he really helps my business by
-                                        providing value to my business. </p>
-                                    <h4 class="name">Tim Bailey</h4>
-                                    <span class="designation">SEO Specialist, Theme Junction</span>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- TESTIMONIAL SECTION END -->
-
-        <!-- BLOG SECTION STAR -->
-        <!--<section class="blog-section" id="blog-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-header text-center">
-                            <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">Recent Blogs</h2>
-                            <p class=" wow fadeInUp" data-wow-delay=".4s">We put your ideas and thus your wishes in the
-                                form of a unique web project that inspires
-                                you
-                                and you customers.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-item wow fadeInUp" data-wow-delay=".5s">
-                            <div class="blog-thumb">
-                                <a href="blog-details.html">
-                                    <img src="assets/img/blog/1.jpg" alt="">
-                                </a>
-                                <a href="#" class="category">Tutorial</a>
-                            </div>
-
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <ul class="ul-reset">
-                                        <li><i class="fa-light fa-calendar-days"></i> Oct 01, 2022</li>
-                                        <li><i class="fa-light fa-comments"></i> <a href="#">Comment (0)</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="blog-title"><a href="blog-details.html">top 10 ui ux designers</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-item wow fadeInUp" data-wow-delay=".6s">
-                            <div class="blog-thumb">
-                                <a href="blog-details.html">
-                                    <img src="assets/img/blog/2.jpg" alt="">
-                                </a>
-                                <a href="#" class="category">TIPS</a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <ul class="ul-reset">
-                                        <li><i class="fa-light fa-calendar-days"></i> Nov 01, 2022</li>
-                                        <li><i class="fa-light fa-comments"></i> <a href="#">Comment (0)</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="blog-title"><a href="blog-details.html">App Development Guides</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-item wow fadeInUp" data-wow-delay=".7s">
-                            <div class="blog-thumb">
-                                <a href="blog-details.html">
-                                    <img src="assets/img/blog/3.jpg" alt="">
-                                </a>
-                                <a href="#" class="category">FREEBIES</a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <ul class="ul-reset">
-                                        <li><i class="fa-light fa-calendar-days"></i> Dec 01, 2022</li>
-                                        <li><i class="fa-light fa-comments"></i> <a href="#">Comment (0)</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="blog-title"><a href="blog-details.html">learn graphic design free</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>-->
-        <!-- BLOG SECTION END -->
-
-        <!-- CONTACT SECTION START -->
-        <section class="contact-section blog-section" id="contact-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-7 order-2 order-md-1">
-                        <div class="contact-form-box wow fadeInLeft" data-wow-delay=".3s">
-                            <div class="section-header">
-                                <h2 class="section-title">Let’s work together!</h2>
-                                <p>I design and code beautifully simple things and i love what i do. Just simple like
-                                    that!
-                                </p>
-                            </div>
-
-                            <div class="tj-contact-form">
-                                <form id="contact-form">
-                                    <div class="row gx-3">
-                                        <div class="col-sm-6">
-                                            <div class="form_group">
-                                                <input type="text" name="conName" id="conName" placeholder="First name"
-                                                    autocomplete="off">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form_group">
-                                                <input type="text" name="conLName" id="conLName" placeholder="Last name"
-                                                    autocomplete="off">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form_group">
-                                                <input type="email" name="conEmail" id="conEmail"
-                                                    placeholder="Email address" autocomplete="off">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form_group">
-                                                <input type="tel" name="conPhone" id="conPhone"
-                                                    placeholder="Phone number" autocomplete="off">
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form_group">
-                                                <select name="conService" id="conService" class="tj-nice-select">
-                                                    <option value="" selected disabled>Choose Service</option>
-                                                    <option value="braning">Branding Design</option>
-                                                    <option value="web">Web Design</option>
-                                                    <option value="uxui">UI/UX Design</option>
-                                                    <option value="app">App Design</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form_group">
-                                                <textarea name="conMessage" id="conMessage"
-                                                    placeholder="Message"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form_btn">
-                                                <button type="submit" class="btn tj-btn-primary">Send Message</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 offset-lg-1 col-md-5  d-flex flex-wrap align-items-center  order-1 order-md-2">
-                        <div class="contact-info-list">
-                            <ul class="ul-reset">
-                                <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight"
-                                    data-wow-delay=".4s">
-                                    <div class="icon-box">
-                                        <i class="flaticon-phone-call"></i>
-                                    </div>
-                                    <div class="text-box">
-                                        <p>Phone</p>
-                                        <a href="tel:0756920507">+94 756 920 507</a>
-                                    </div>
-                                </li>
-                                <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight"
-                                    data-wow-delay=".5s">
-                                    <div class="icon-box">
-                                        <i class="flaticon-mail-inbox-app"></i>
-                                    </div>
-                                    <div class="text-box">
-                                        <p>Email</p>
-                                        <a href="mailto:kpushpakumarajd@gmail.com">kpushpakumarajd@gmail.com</a>
-                                    </div>
-                                </li>
-                                <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight"
-                                    data-wow-delay=".6s">
-                                    <div class="icon-box">
-                                        <i class="flaticon-location"></i>
-                                    </div>
-                                    <div class="text-box">
-                                        <p>Address</p>
-                                        <a href="#">224/B,Malegoda,Payagala <br>Kalutara, Sri Lanka</a>
-                                    </div>
-                                </li>
-                                <div class="fadeInRight wow badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="pushpakumara-k" data-version="v1">
-                                    <a class="badge-base__link LI-simple-link" href="https://lk.linkedin.com/in/pushpakumara-k?trk=profile-badge"></a>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- CONTACT SECTION END -->
-
-        <!-- BEGIN: Contact Form Success Modal Message -->
-        <div class="modal contact_modal" id="message_sent" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="modal-title"><strong>Message Sent Successfully</strong></span>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><i
-                                class="fas fa-times"></i></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Thank you for contacting us. We will get back to you shortly.<br>Have a great day!</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-                    </div>
+                <div class="edu-item glass-card tech-border">
+                    <i class="fas fa-pen-nib edu-icon text-blue"></i>
+                    <h4>Typography Expert</h4>
+                    <p>Unicode to Legacy Mapping</p>
                 </div>
             </div>
         </div>
-        <!-- END: Contact Form Success Modal Message -->
+    </section>
 
-        <!-- BEGIN: Contact Form Fail Modal Message -->
-        <div class="modal contact_modal failed" id="message_fail" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="modal-title"><strong>Error</strong></span>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><i
-                                class="fas fa-times"></i></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Oops! Something went wrong, please try again.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
+    <!-- Footer -->
+    <footer class="footer glass-panel">
+        <div class="footer-content">
+            <div class="logo font-mono text-muted">root@portfolio:~# exit</div>
+            <p>&copy; 2026 PushpaKumara. Orchestrated with passion & code.</p>
+            <div class="social-links minimal">
+                <a href="https://www.linkedin.com/in/pushpakumara-k/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/PushpaKumara89"><i class="fab fa-github"></i></a>
             </div>
         </div>
-        <!-- END: Contact Form Fail Modal Message End -->
-    </main>
-
-    <!-- FOOTER AREA START -->
-    <footer class="tj-footer-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center" >
-                    <div class="footer-logo-box">
-                        <a href="#"><img src="assets/img/logo/logopk.png" alt=""></a>
-                    </div>
-
-                    <div class="footer-menu">
-                        <nav>
-                            <ul>
-                                <!-- <li><a href="#services-section">Services</a></li> -->
-                                <!-- <li><a href="#works-section">Works</a></li> -->
-                                <li><a href="#resume-section">Resume</a></li>
-                                <li><a href="#skills-section">Skills</a></li>
-                                <li><a href="#testimonials-section">Certificates</a></li>
-                                <li><a href="#contact-section">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="copy-text">
-                        <p>&copy; 2024 All rights reserved by <a href="#" target="_blank">K PushpaKumara</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
     </footer>
-   <!-- FOOTER AREA END -->
 
-    <!-- CSS here -->
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/nice-select.min.js"></script>
-    <script src="assets/js/backToTop.js"></script>
-    <script src="assets/js/smooth-scroll.js"></script>
-    <script src="assets/js/appear.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/one-page-nav.js"></script>
-    <script src="assets/js/lightcase.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
-    <script src="assets/js/magnific-popup.js"></script>
-    <script src="assets/js/validate.min.js"></script>
-    <script src="assets/js/custom.js"></script>
-
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

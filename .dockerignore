@@ -1,5 +1,8 @@
+.git
 .idea
 .github
 README.md
+instructions.md
 Dockerfile
 .dockerignore
+.gitignore
